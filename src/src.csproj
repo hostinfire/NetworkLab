@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <AssemblyName>NorthstarNetworkLab</AssemblyName>
+    <Version>1.0.0</Version>
+    <Product>Northstar Network Lab</Product>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.40.0" />
+    <Content Include="Help\**\*.md" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

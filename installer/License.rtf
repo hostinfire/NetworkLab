@@ -1,0 +1,72 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0\fswiss Segoe UI;}}
+{\colortbl;\red22\green50\blue61;\red48\green73\blue81;}
+\viewkind4\uc1\pard\f0\fs24\cf1\b Northstar Network Lab\par
+End User License Agreement\b0\par
+\fs18 Version 1.0.0 - October 2, 2026\par
+\par
+This is a general-purpose license template, not legal advice. A distributor should have it reviewed for applicable jurisdictions and add its legal name and contact details before public release.\par
+\par
+Please read this agreement before installing or using Northstar Network Lab (the \b Software\b0). \b Provider\b0 means the person or organization that supplied this copy. \b You\b0 means the individual accepting these terms or, for organizational use, that organization and its authorized users. Selecting I Agree, installing, copying, or using the Software indicates acceptance. If you do not accept, cancel installation and do not use the Software.\par
+\par
+\b 1. License grant\b0\par
+Subject to this agreement and applicable law, Provider grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Software for personal, educational, classroom, evaluation, and internal organizational purposes. You may install it on devices you own or administer and permit authorized users to use it for those purposes.\par
+\par
+You may make a reasonable number of backup copies of the installer. You may redistribute the original, unmodified installer where you have the right to do so, provided you include this agreement and do not imply Provider endorses you. You may not sell, rent, sublicense, or bundle the Software into a commercial product without Provider's separate written permission.\par
+\par
+\b 2. Restrictions\b0\par
+Except where applicable law or a component license does not permit a restriction, you may not remove or obscure legal notices; reverse engineer, decompile, disassemble, or extract source code; circumvent installer, licensing, access-control, or security features; misrepresent the Software as certified or affiliated with a networking vendor; use it to access, interfere with, or damage systems without authorization; or distribute a modified installer as an official Provider release.\par
+\par
+\b 3. Ownership and user content\b0\par
+The Software, its original source, interface, and bundled original assets remain the property of their respective rights holders. This agreement transfers no ownership. Third-party names and marks remain with their respective owners. You retain your rights in topologies, device configurations, notes, lab activities, and other project content you create. You are responsible for having permission to include third-party content in a project. The Software does not claim ownership of your project files.\par
+\par
+\b 4. Educational simulation; no operational reliance\b0\par
+The Software is an educational simulator. Its protocol engines use simplified, deterministic models and are not complete implementations of networking standards or real equipment. Results may omit timers, packet serialization, authentication, cryptographic behavior, retransmission, routing policy, hardware constraints, and other real-world effects.\par
+\par
+Do not rely on simulated results for production network design, safety-critical decisions, security certification, compliance, incident response, or operation of physical equipment. Independently verify configurations in an appropriate test environment before using them elsewhere. Provider is not responsible for outages, data loss, security incidents, or other harm caused by treating a simulation as a production guarantee.\par
+\par
+\b 5. Project files and local storage\b0\par
+The Software saves project files where you choose and periodically writes an autosave/recovery project under your local application data directory, normally %LocalAppData%\\NorthstarNetworkLab\\autosave.nslab. Preferences, including an optional Discord Application ID, are stored separately in that local directory. You are responsible for backups, access permissions, and deleting files you no longer need.\par
+\par
+The current Software contains no Provider-operated cloud project service, account service, or analytics/telemetry service. Windows, your organization, backup software, or synchronization tools may separately copy local files under their own settings and policies.\par
+\par
+\b 6. Optional Discord Rich Presence\b0\par
+Rich Presence is optional and disabled until configured. If enabled, the Software connects to Discord Desktop through a local IPC channel and submits activity fields such as project name, selected device name/type, or current simulation action so Discord can display the activity. It does not intentionally send topology contents, interface addresses, or project files through Rich Presence. Discord's handling of activity data is governed by Discord's own terms and privacy policy. You can disconnect and clear the saved Application ID in Software settings.\par
+\par
+\b 7. Multiplayer and network communications\b0\par
+Multiplayer is optional and starts only when a user chooses to host or connect. It uses direct TCP communication between peers. A joining peer sends a display name; the host sends project snapshots; peers send authorized project updates, lock requests, and presence/leave messages. Project snapshots can contain device names, interface addresses, routes, services, wireless settings, notes, annotations, IoT state, and lab activities.\par
+\par
+The current multiplayer implementation does not provide transport encryption, peer authentication, account identity verification, a relay, or automatic NAT traversal. A host accepts connections on the configured listening port. Anyone able to reach that port may attempt to connect. Edit locks coordinate editing but are not a security boundary against a malicious peer. Use multiplayer only on a network you trust, restrict inbound firewall access to the intended private network, and do not expose this port to the public internet. Disconnect if an unexpected peer joins.\par
+\par
+\b 8. Third-party components\b0\par
+The Software may include or use components supplied by Microsoft and other third parties, including the .NET runtime and Markdown rendering libraries. Those components remain subject to their own license terms. Nothing in this agreement reduces rights granted by third-party or open-source licenses. Applicable required notices accompany relevant packages or source distributions.\par
+\par
+\b 9. Updates and support\b0\par
+Provider may publish updates, change functionality, or discontinue distribution. This installer promises neither automatic updates nor ongoing technical support. Obtain installers from a source you trust and check release information before upgrading. Major upgrades may replace application files; user project files are intended to remain in local application data, but maintain backups.\par
+\par
+\b 10. Term and termination\b0\par
+This license begins when accepted and continues until terminated. It terminates automatically if you materially breach its restrictions. On termination, stop using and uninstall the Software and destroy installer copies you control, except where retention is required by law or a component license. Sections concerning ownership, user content, disclaimers, liability, and interpretation survive termination.\par
+\par
+\b 11. Warranty disclaimer\b0\par
+\b TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED AS IS AND AS AVAILABLE, WITH ALL FAULTS AND WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. THIS INCLUDES IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, ACCURACY, AVAILABILITY, AND QUIET ENJOYMENT. PROVIDER DOES NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE, SECURE, UNINTERRUPTED, COMPATIBLE WITH EVERY SYSTEM, OR THAT SIMULATION OUTPUT WILL MATCH REAL NETWORK BEHAVIOR.\b0\par
+Some jurisdictions do not allow certain warranty exclusions. In those jurisdictions, exclusions apply only to the extent permitted by law.\par
+\par
+\b 12. Limitation of liability\b0\par
+\b TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PROVIDER AND ITS CONTRIBUTORS WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES; LOSS OF PROFITS, BUSINESS, DATA, GOODWILL, OR USE; NETWORK OR SYSTEM INTERRUPTION; OR SUBSTITUTE-SERVICE COSTS, ARISING OUT OF OR RELATED TO THE SOFTWARE, THIS AGREEMENT, PROJECT FILES, SIMULATION RESULTS, DISCORD PRESENCE, OR MULTIPLAYER, UNDER ANY THEORY OF LIABILITY, EVEN IF ADVISED OF THE POSSIBILITY.\b0\par
+\par
+\b TO THE MAXIMUM EXTENT PERMITTED BY LAW, TOTAL LIABILITY FOR ALL CLAIMS RELATING TO THE SOFTWARE WILL NOT EXCEED THE AMOUNT YOU PAID SPECIFICALLY FOR THIS COPY, OR, IF YOU PAID NOTHING, THE MINIMUM AMOUNT ALLOWED BY APPLICABLE LAW.\b0 Nothing excludes liability that cannot lawfully be excluded, including fraud or intentional misconduct where exclusion is prohibited.\par
+\par
+\b 13. Indemnity for misuse\b0\par
+To the extent permitted by law, you are responsible for claims and losses caused by unlawful use, unauthorized network access, or distribution of project content that infringes another party's rights. You do not indemnify Provider for Provider's own unlawful conduct or liabilities that cannot be shifted by law.\par
+\par
+\b 14. Privacy and security summary\b0\par
+The Software operates on your device except for optional local Discord IPC and user-initiated direct multiplayer sessions. The current version has no Provider account, central server, or automatic project upload. Multiplayer project snapshots are transmitted to connected peers over unencrypted TCP. Use synthetic or non-sensitive data when sharing. Sections 5-7 provide details.\par
+\par
+\b 15. Governing law and consumer rights\b0\par
+This agreement is governed by the laws that apply to you and Provider under mandatory local law. Nothing here removes non-waivable consumer rights or prevents a claim in a forum required by applicable law. If a provision is unenforceable, it will be limited only as much as necessary; the remaining provisions continue in effect.\par
+\par
+\b 16. Entire agreement and contact\b0\par
+This is the complete agreement about use of this Software and supersedes earlier terms supplied with this copy, except for third-party license terms. Contact Provider through the person or organization that supplied the installer. A distributor should provide valid support and legal contact details before release.\par
+\par
+\b By accepting the installer terms, you confirm that you have read and understood this agreement.\b0\par
+}

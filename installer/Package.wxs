@@ -1,0 +1,44 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+  xmlns:ui="http://wixtoolset.org/schemas/v4/wxs/ui">
+  <Package Name="Northstar Network Lab"
+           Manufacturer="Northstar Network Lab"
+           Version="1.0.0"
+           UpgradeCode="5AE39613-FD5C-41BF-9F6B-4E8C847A6FC7"
+           Scope="perMachine">
+    <SummaryInformation Description="Northstar Network Lab network simulation workspace" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of Northstar Network Lab is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <Property Id="WixUILicenseRtf" Value="License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="InstallerBanner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="InstallerDialog.bmp" />
+    <ui:WixUI Id="WixUI_InstallDir" InstallDirectory="INSTALLFOLDER" />
+
+    <Feature Id="MainFeature" Title="Northstar Network Lab" Level="1">
+      <ComponentGroupRef Id="ApplicationFiles" />
+      <ComponentRef Id="StartMenuShortcut" />
+    </Feature>
+  </Package>
+
+  <Fragment>
+    <StandardDirectory Id="ProgramFiles64Folder">
+      <Directory Id="INSTALLFOLDER" Name="Northstar Network Lab" />
+    </StandardDirectory>
+    <StandardDirectory Id="ProgramMenuFolder">
+      <Directory Id="ApplicationProgramsFolder" Name="Northstar Network Lab" />
+    </StandardDirectory>
+
+    <ComponentGroup Id="ApplicationFiles" Directory="INSTALLFOLDER">
+      <Files Include="$(var.PublishDir)**" />
+    </ComponentGroup>
+
+    <Component Id="StartMenuShortcut" Directory="ApplicationProgramsFolder" Guid="C7987D2C-2AF6-4A23-9B4B-0ACAD4B8B669">
+      <Shortcut Id="NorthstarStartMenuShortcut"
+                Name="Northstar Network Lab"
+                Description="Build and simulate educational network topologies"
+                Target="[INSTALLFOLDER]NorthstarNetworkLab.exe"
+                WorkingDirectory="INSTALLFOLDER" />
+      <RemoveFolder Id="RemoveApplicationProgramsFolder" On="uninstall" />
+      <RegistryValue Root="HKCU" Key="Software\NorthstarNetworkLab" Name="Installed" Type="integer" Value="1" KeyPath="yes" />
+    </Component>
+  </Fragment>
+</Wix>

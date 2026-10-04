@@ -1,0 +1,21 @@
+<Project Sdk="WixToolset.Sdk/5.0.2">
+  <PropertyGroup>
+    <OutputType>Package</OutputType>
+    <Platform>x64</Platform>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <PublishDir>$(MSBuildProjectDirectory)\..\artifacts\publish\</PublishDir>
+    <DefineConstants>PublishDir=$(PublishDir)</DefineConstants>
+    <OutputName>NorthstarNetworkLab-Setup</OutputName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="5.0.2" />
+    <Content Include="License.rtf" />
+    <Content Include="InstallerBanner.bmp" />
+    <Content Include="InstallerDialog.bmp" />
+  </ItemGroup>
+
+  <Target Name="PublishNorthstarNetworkLab" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet publish &quot;$(MSBuildProjectDirectory)\..\src\src.csproj&quot; --configuration Release --runtime win-x64 --self-contained true -p:PublishSingleFile=false -o &quot;$(PublishDir)&quot;" />
+  </Target>
+</Project>
