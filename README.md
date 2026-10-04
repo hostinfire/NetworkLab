@@ -7,7 +7,6 @@ Northstar Network Lab is an independent Windows desktop application for building
 ## Contents
 
 - [Features](#features)
-- [Install](#install)
 - [Run from source](#run-from-source)
 - [Quick start](#quick-start)
 - [CLI](#cli)
@@ -44,16 +43,6 @@ Northstar Network Lab is an independent Windows desktop application for building
 - Configuration objectives with score calculation and on-demand hints.
 
 Simulation events can be played, paused, stepped, restarted, and inspected in the event and packet panels. The event model is calculated from the topology and configuration; timeline controls replay generated events rather than advancing a full live packet-processing kernel.
-
-## Install
-
-Download and run the Windows x64 MSI:
-
-[NorthstarNetworkLab-Setup.msi](installer/bin/x64/Release/NorthstarNetworkLab-Setup.msi)
-
-The interactive installer includes a license page, a destination folder page with **Browse**, progress/completion screens, and a Start Menu shortcut. The MSI is self-contained and does not require a separate .NET runtime installation.
-
-See [INSTALL.md](INSTALL.md) for step-by-step setup, uninstall, multiplayer firewall guidance, and installer build instructions. The MSI is currently unsigned, so Windows may show an unknown-publisher or SmartScreen warning.
 
 ## Run from source
 
@@ -149,17 +138,6 @@ The app periodically writes a recovery project under `%LocalAppData%\NorthstarNe
 | Peer hosting, snapshots, and edit locks | `src/Core/MultiplayerSession.cs` |
 | Discord local IPC | `src/Core/DiscordIpcProtocol.cs`, `src/Core/DiscordPresenceService.cs` |
 | In-app Markdown documentation | `src/Help/*.md`, `src/HelpCenterWindow.xaml` |
-| MSI and installer assets | `installer/Package.wxs`, `installer/Generate-InstallerArtwork.ps1`, `installer/License.rtf` |
-
-## Build the installer
-
-With the .NET 8 SDK installed on Windows, run:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File installer\Build-Installer.ps1
-```
-
-This publishes a self-contained `win-x64` application and builds `installer\bin\x64\Release\NorthstarNetworkLab-Setup.msi`. The WiX SDK is restored automatically. In VS Code, use **Terminal > Run Build Task** or `Ctrl+Shift+B` to run the **Build Windows Installer** task.
 
 ## Tests
 
@@ -179,4 +157,4 @@ This project is an educational event simulator, not a standards-complete network
 
 The app has no Provider-operated cloud service, account system, or analytics/telemetry in the current source. Projects/autosave are local by default. Optional Discord presence sends activity labels to the local Discord client. Multiplayer sends project snapshots and edits over direct, unencrypted TCP to connected peers.
 
-The installer agreement is in [LICENSE.md](LICENSE.md) and `installer/License.rtf`. It is a general-purpose template, not legal advice. Obtain qualified, jurisdiction-specific review and add provider contact information before public distribution. The MSI is unsigned; sign the installer and application with a trusted certificate for public releases.
+The project license terms are in [LICENSE.md](LICENSE.md). They are a general-purpose template, not legal advice; obtain qualified, jurisdiction-specific review and add provider contact information before public distribution.
